@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {FiLogIn} from 'react-icons/fi'
+
+import "./global.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="login-container">
+      <section className="form">
+        <form>
+          <h1>Faça seu login</h1>
+
+          <input placeholder="Digite seu nome" />
+          
+          <input placeholder="Digite seu sobrenome" />
+          
+          <input placeholder="Digite seu E-mail" />
+          
+          <button type="submit"> Cadastrar </button>
+
+          <a href="/registrar">
+            <FiLogIn size ={16} color ="#ff0000" />
+            Não tenho cadastro
+          </a>
+        </form>
+      </section>
     </div>
   );
 }
